@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Alexandria', 'sans-serif';
+}
+
+body{
+    --s: 123px;
+    --c1: #79c070;
+    --c2: #141414;
+    
+    --_s: calc(2*var(--s)) calc(2*var(--s));
+    --_g: var(--_s) conic-gradient(at 40% 40%,#0000 75%,var(--c1) 0);
+    --_p: var(--_s) conic-gradient(at 20% 20%,#0000 75%,var(--c2) 0);
+    background:
+      calc( .9*var(--s)) calc( .9*var(--s))/var(--_p),
+      calc(-.1*var(--s)) calc(-.1*var(--s))/var(--_p),
+      calc( .7*var(--s)) calc( .7*var(--s))/var(--_g),
+      calc(-.3*var(--s)) calc(-.3*var(--s))/var(--_g),
+      conic-gradient(from 90deg at 20% 20%,var(--c2) 25%,var(--c1) 0) 
+       0 0/var(--s) var(--s);
+    animation: m 6s infinite;
+  }
+  @keyframes m {
+    0% {
+     background-position: 
+      calc( .9*var(--s)) calc( .9*var(--s)),
+      calc(-.1*var(--s)) calc(-.1*var(--s)),
+      calc( .7*var(--s)) calc( .7*var(--s)),
+      calc(-.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    25% {
+     background-position: 
+      calc(1.9*var(--s)) calc( .9*var(--s)),
+      calc(-1.1*var(--s)) calc(-.1*var(--s)),
+      calc(1.7*var(--s)) calc( .7*var(--s)),
+      calc(-1.3*var(--s)) calc(-.3*var(--s)),0 0
+    }
+    50% {
+     background-position: 
+      calc(1.9*var(--s)) calc(-.1*var(--s)),
+      calc(-1.1*var(--s)) calc( .9*var(--s)),
+      calc(1.7*var(--s)) calc(-.3*var(--s)),
+      calc(-1.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    75% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-.1*var(--s)),
+      calc(-2.1*var(--s)) calc( .9*var(--s)),
+      calc(2.7*var(--s)) calc(-.3*var(--s)),
+      calc(-2.3*var(--s)) calc( .7*var(--s)),0 0
+    }
+    100% {
+     background-position: 
+      calc(2.9*var(--s)) calc(-1.1*var(--s)),
+      calc(-2.1*var(--s)) calc(1.9*var(--s)),
+      calc(2.7*var(--s)) calc(-1.3*var(--s)),
+      calc(-2.3*var(--s)) calc(1.7*var(--s)),0 0
+    }
+}
+
+
+
+
+.resume-contents {
+    min-height: 80v;
+    width: 85%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+
+.left-section {
+    grid-column: span 2;
+    height: 94%;
+    background-color:#511863;
+    border-radius: 60px 0px 0px 60px;
+    
+}
+
+.right-section {
+    grid-column: span 5;
+    height: 100%;
+    background-color: #141414;
+    border-radius: 0px 60px 60px 60px;
+}
+
+.left-section-content{
+    padding: 1rem 2rem;
+}
+
+.profile {
+    width: 100%;
+    border-bottom: 3px solid #141414;
+}
+
+.profile .profile-image {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #141414;
+}
+
+.name {
+    color: #62ccda;
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+}
+
+.profession {
+    color: #79c070;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.left-title {
+    color: #000000;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight:bolder;
+    display: flex;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.contact-info ul {
+    padding-top: 1.5rem;
+}
+
+.contact-info ul li,
+.references ul li {
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: #f4f7f9af;
+    letter-spacing: 1px;
+    font-size: 17px;
+}
+
+.contact-info ul li i,
+.references ul li i {
+    padding-right: 1rem;
+    font-size: 18px;
+    color:#79c070;
+}
+
+.skills ul {
+    padding-top: 1.5rem;
+}
+.skills ul li p {
+    padding: .4rem 0;
+    color:#ffffffcb;
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.referance-name {
+    padding-top: 1.5rem;
+    padding-bottom: .4rem;
+    font-size: 18px;
+    color: #241818;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.referance-profession {
+    font-size: 16px;
+    color: #d6dbdfaf;
+    letter-spacing: 1px;
+    padding-bottom: .4rem;
+}
+
+
+.right-section-contents {
+    padding: 2rem 2rem;
+}
+
+.right-title {
+    color:#79c070;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.gap {
+    padding-bottom: 1rem;
+}
+.about-me-contents {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    color: #af5bc9;
+    
+}
+
+.experience-contents,
+.education-contents,
+.awards-contents {
+    font-size: 22px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 1.5rem;
+    color: #f1f8fdd8;
+}
+
+.exp-company-name,
+.education-school-name,
+.awards-company-name {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color:#a634c9;
+    padding-bottom: .4rem;
+}
+
+.exp-time-period,
+.education-time-period,
+.awards-time-period {
+    color: #dee3e8;
+    font-size: 22px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+.exp-position,
+.education-subject,
+.awards-name {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+     color:#5da2ac;
+    padding-bottom: .4rem;
+}
+
+.exp-desc,
+.education-desc,
+.awards-desc {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    border-left: 3px solid;
+    color: #b1abb3;
+    padding-left: 5px;
+}
+
+/* Media queries */
+@media screen and (max-width:780px) {
+    .experience-contents,
+    .education-contents,
+    .awards-contents {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:780px) {
+    .left-section {
+        grid-column: span 3;
+    }
+    
+    .right-section {
+        grid-column: span 4;
+    }
+    
+}
+
+@media screen and (max-width:1200px) {
+    .resume-contents {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width:390px) {
+    .resume-contents {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .profession {
+        font-size: 18px;
+    }
+
+    .left-title {
+        font-size: 18px;
+    }
+
+    .right-title {
+        font-size: 18px;
+    }
+
+    .contact-info ul li,
+    .references ul li {
+        font-size: 12px;
+    }
+
+    .contact-info ul li i,
+    .references ul li i {
+        /* padding-right: 1rem; */
+        font-size: 10px;
+    }
+
+    .skills ul li p {
+        font-size: 12px;
+    }
+
+    .about-me-contents {
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+
+    .exp-company-name,
+    .education-school-name,
+    .awards-company-name {
+        font-size: 18px;
+    }
+
+    .exp-time-period,
+    .educationp-time-period,
+    .awards-time-period {
+        font-size: 18px;
+    }
+
+    .exp-position,
+    .education-subject,
+    .awards-name {
+        font-size: 18px;
+    }
+}
